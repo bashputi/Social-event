@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center shadow-lg">
            <div>
            <div className="carousel w-[90vw] h-[80vh]">
   <div id="slide1" className="carousel-item relative w-full">

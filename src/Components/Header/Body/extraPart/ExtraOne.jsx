@@ -2,7 +2,7 @@
 
 const ExtraOne = () => {
     return (
-        <div className="bg-indigo-100 pb-10 mt-4 flex justify-center">
+        <div className="bg-indigo-100 shadow-xl pb-10 flex justify-center">
            <div>
            <h1 className="text-5xl text-amber-500 font-bold text-center my-10">Reviews</h1>
 

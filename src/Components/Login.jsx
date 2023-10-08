@@ -25,10 +25,12 @@ const Login = () => {
         })
     };
 
-    const handleGoogleSignIn = () => {
+    const handleGoogleSignIn = e => {
         googleSignIn()
         .then(result => {
-            console.log(result.user)
+            console.log(result.user);
+            e.target.reset();
+            navigate('/');
         })
        
     };
