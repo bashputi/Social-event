@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Engagement Event",
+    "image": "https://i.ibb.co/HhrvH8L/180649-HL-0050.jpg",
+    "description": "Creating timeless and elegant weddings that leave a lasting impression.",
+    "cost": "$10,000 - $20,000"
+  },
+  {
+    "id": 2,
+    "name": "Haldi Night",
+    "image": "https://i.ibb.co/K76YLg6/1542194238haldi-theme-ideas.jpg",
+    "description": "Transforming your dreams into a fairytale wedding experience.",
+    "cost": "$15,000 - $25,000"
+  },
+  {
+    "id": 3,
+    "name": "Mehendi Event",
+    "image": "https://i.ibb.co/tQJ8Tzr/Mehndi-ceremony-Significance-1.jpg",
+    "description": "Curating chic and stylish weddings for the modern couple.",
+    "cost": "$12,000 - $22,000"
+  },
+  {
+    "id": 4,
+    "name": "Nikha",
+    "image": "https://i.ibb.co/1mj8k64/c22de266f6b187b773a39edbaeaebfda.jpg",
+    "description": "Bringing your whimsical wedding visions to life with creativity and flair.",
+    "cost": "$18,000 - $28,000"
+  },
+  {
+    "id": 5,
+    "name": "Walimah",
+    "image": "https://i.ibb.co/gV35dVg/Inside-image-Wedding-Photographers6.webp",
+    "description": "Crafting weddings inspired by the timeless beauty of the past.",
+    "cost": "$14,000 - $24,000"
+  },
+  {
+    "id": 6,
+    "name": "Reception",
+    "image": "https://i.ibb.co/MN8LMV0/121471-Prianka-Azam-Day-2-0608.jpg",
+    "description": "Designing romantic weddings that captivate hearts and inspire love.",
+    "cost": "$16,000 - $26,000"
+  }
+]
