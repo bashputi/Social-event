@@ -1,8 +1,18 @@
-# React + Vite
+# My website name
+- Social-Events
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live website link
 
-Currently, two official plugins are available:
+-
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 5 Different features and functionalities of my website.
+
+- Our Services section has 6 card, Details button of these card will show details about that card.
+
+- Home page has 6 sections like Navbar, Slider, Our Service, Our Wedding Preparations, Reviews & Footer.
+
+- Only logged in visiter will bw able to use the details button of services section.
+
+- User can toggle between login & register page.
+
+- User can login with their Google accounts.
