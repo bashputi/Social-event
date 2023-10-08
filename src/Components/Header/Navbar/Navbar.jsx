@@ -7,15 +7,10 @@ import { AuthContext } from "../../../layOut/Pages/Providers/AuthProvider";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
-    const handleLogOut = () => {
-        logOut()
-        .then(() => console.log('user logged out successfully'))
-        .catch(console.error (error))
-     };
 
      const navLinks = <>
             <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#FF444A] underline" : "" }>Home</NavLink></li>
-            <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#FF444A] underline" : "" }>Home</NavLink></li>
+            <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#FF444A] underline" : "" }>Login</NavLink></li>
             <li><NavLink to="/register" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#FF444A] underline" : "" }>Home</NavLink></li>
             <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#FF444A] underline" : "" }>Home</NavLink></li>
      </>
@@ -31,7 +26,7 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">Moha Milon</a>
+            <a className="btn btn-ghost normal-case text-xl"><span className="text-amber-600">Wedding</span><span className="text-green-700">Planner</span> </a>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -41,11 +36,11 @@ const Navbar = () => {
         <div className="navbar-end">
             {
                 user ? <>
-                    <span>{user.email}</span>
-                    <a onClick={handleLogOut} className="btn btn-sm">Sign out</a>
+                     <span><img src={user.photoURL} alt={user.displayName} /></span>
+                    <a onClick={logOut} className="btn btn-sm">Log out</a>
                 </> 
                 : <Link to="/login">
-                    <button className="btn btn-sm">Login</button>
+                    <button className="btn btn-sm btn-ghost">Login</button>
                 </Link>
             }
             
