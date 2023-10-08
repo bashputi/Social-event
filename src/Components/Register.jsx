@@ -1,14 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../layOut/Pages/Providers/AuthProvider";
 
 
-import toast from "react-hot-toast";
+
 
 
 const Register = () => {
    
-    
+    const [registerError, setRegisterError] = useState('');
+    const [success, setsuccess] = useState('');
     const { signUp, handleUpdateProfile } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -20,22 +21,29 @@ const Register = () => {
         const password = e.target.password.value;
 
         if(password.length < 6) {
-            toast.error('Password is less than 6 charecters');
+            setRegisterError('Password is less than 6 charecters');
+            return;
+        }else if(!/[A-Z]/.test(password)) {
+            setRegisterError('Use a capital letter ')
+            return;
+        }else if(!/[@$!%*#?&]/.test(password)) {
+            setRegisterError('Use atleast 1 special charecter')
             return;
         }
-       
+        setRegisterError('');
+        setsuccess('');
 
         signUp(email, password)
         .then(result => {
             console.log(result.user)
             handleUpdateProfile(name)
             .then(() => {
-                toast.success('Sign up successfully!')
+                setsuccess('Sign up successfully!');
                 navigate('/')
             })
         })
         .catch(error => {
-            toast.error(error.message)
+            setRegisterError(error.message);
         })
 
     };
@@ -78,7 +86,12 @@ const Register = () => {
                             <button className="btn btn-primary">Register</button>
                         </div>
                     </form>
-                    
+                      {
+                        registerError && <p className="text-red-700"> {registerError} </p>
+                      }
+                      {
+                        success && <p className="text-green-600">{success}</p>
+                      }
                     <p> Already have account?<Link to="/login">Please
                         <button className="btn btn-link"> Login</button>
                     </Link> </p>

@@ -30,9 +30,7 @@ const Login = () => {
         .then(result => {
             console.log(result.user)
         })
-        .catch(error => {
-            console.error(error)
-        })
+       
     };
     
     return (
@@ -67,7 +65,7 @@ const Login = () => {
                         <p> New to this site? Please <Link to="/register">
                             <button className="btn btn-link">Register</button>
                         </Link> </p>
-                        <p><button onClick={handleGoogleSignIn} className="btn btn-ghost">Signin With Google</button></p>
+                        <p className="ml-8"><button onClick={handleGoogleSignIn} className="btn btn-success">Signin With Google</button></p>
                     </div>
                 </div>
             </div>
