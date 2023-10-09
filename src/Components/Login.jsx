@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../layOut/Pages/Providers/AuthProvider";
 
 
 const Login = () => {
 
+    const [logInError, setLogInError] = useState('');
+    const [success, setSuccess] = useState('');
     const { signIn, googleSignIn} = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -13,24 +15,33 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
+        setLogInError('');
+        setSuccess('');
+
         signIn(email, password)
         .then(result => {
             console.log(result.user)
+            setSuccess('User Logged in Successfully.')
             e.target.reset();
             navigate('/');
 
         })
         .catch(error => {
             console.error(error)
+            setLogInError(error.message);
         })
     };
 
-    const handleGoogleSignIn = e => {
+    const handleGoogleSignIn = () => {
+       
         googleSignIn()
         .then(result => {
             console.log(result.user);
-            e.target.reset();
+            setSuccess('User Logged in Successfully');
             navigate('/');
+        })
+        .catch(error => {
+            setLogInError(error.message);
         })
        
     };
@@ -64,6 +75,12 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
+                        {
+                            logInError && <p className="text-red-700">{logInError}</p>
+                        }   
+                        {
+                            success && <p className="text-green-600">{success}</p>
+                        }                     
                         <p> New to this site? Please <Link to="/register">
                             <button className="btn btn-link">Register</button>
                         </Link> </p>
