@@ -16,6 +16,9 @@ const ServiceDetails = () => {
 
     return (
         <div>
+            <div>
+                <h1 className="text-xl lg:text-4xl text-center my-6 text-amber-600">Imagine Your Desired Plan!</h1>
+            </div>
            <ServiceDetailsCard serviceDetails={serviceDetails}></ServiceDetailsCard>
         </div>
     );
