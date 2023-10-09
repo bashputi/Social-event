@@ -3,7 +3,7 @@
 
 # Live website link
 
--  https://stereotyped-12class.surge.sh/
+-  https://rotten-cook.surge.sh
 
 # 5 Different features and functionalities of my website.
 
