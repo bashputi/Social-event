@@ -17,6 +17,7 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
+        const img = e.target.img.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
 
@@ -36,10 +37,11 @@ const Register = () => {
         signUp(email, password)
         .then(result => {
             console.log(result.user)
-            handleUpdateProfile(name)
+            handleUpdateProfile(name, img)
             .then(() => {
                 setsuccess('Sign up successfully!');
-                navigate('/')
+                e.target.reset();
+                navigate('/login')
             })
         })
         .catch(error => {
@@ -65,6 +67,12 @@ const Register = () => {
                             <input type="text" name="name" placeholder="Your Name" required className="input input-bordered" />
                         </div>
                         <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Image Url</span>
+                                </label>
+                                <input type="text" placeholder="image url" className="input input-bordered" name='img' />
+                            </div>
+                        <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
@@ -79,9 +87,7 @@ const Register = () => {
                              <input type="password" name="password" required placeholder="Password" className="input input-bordered" />
                            
                        
-                            <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label>
+                           
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>

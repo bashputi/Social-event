@@ -47,7 +47,7 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
-                        <span className="mb-4">{user.displayName} <img className="rounded-full w-14 px-2" src={user.photoURL}/></span>
+                        <span className="mr-2 mt-5">{user.displayName}</span> <span> <img className="rounded-full w-14 mb-5 px-2" src={user.photoURL}/></span>
                         </ul>
                     </div>
                     </div>

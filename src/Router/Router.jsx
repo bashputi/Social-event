@@ -2,13 +2,13 @@
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayOut from '../layOut/MainLayOut';
 import Home from '../layOut/Pages/Home';
-import Login from '../components/Login';
-import Register from '../components/Register';
 import PrivateRoute from '../layOut/Pages/PrivateRoute/PrivateRoute';
 import ServiceDetails from '../layOut/Pages/ServiceDetail/ServiceDetails';
 import NotFound from '../layOut/Pages/NotFound';
 import Gallery from '../Components/PrivatePage/Gallery';
 import Contact from '../Components/PrivatePage/Contact';
+import Register from '../Components/Register';
+import Login from '../Components/Login';
 
 const myRoute = createBrowserRouter([
     {
