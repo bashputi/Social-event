@@ -24,7 +24,7 @@ const myRoute = createBrowserRouter([
             {
                 path: 'service/:id',
                 element: <PrivateRoute> <ServiceDetails></ServiceDetails> </PrivateRoute>,
-                loader: () => fetch('./wedding.json')
+                loader: () => fetch('/wedding.json')
             },
             {
                 path: '/login',

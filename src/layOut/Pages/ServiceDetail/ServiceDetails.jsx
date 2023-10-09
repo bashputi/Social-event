@@ -6,7 +6,7 @@ import ServiceDetailsCard from "./ServiceDetailsCard";
 const ServiceDetails = () => {
     const [serviceDetails, setServiceDetails] = useState();
     const { id } = useParams ();
-    const services = useLoaderData();
+    const services = useLoaderData('/wedding.json');
 
     useEffect(() => {
            const findServiceDetails = services?.find(serviceDetails => serviceDetails.id == id);
